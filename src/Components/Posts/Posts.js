@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Posts.css';
 import ShowPosts from '../ShowPosts/ShowPosts';
-import CommentDetails from '../CommentDetails/CommentDetails';
-// import CommentDetails from '../CommentDetails/CommentDetails';
 
 
 const Posts = () => {
@@ -17,6 +15,7 @@ const Posts = () => {
             {
                 posts.map(post => <ShowPosts key={post.id} post={post}></ShowPosts>)
             }
+           
         </div>
     );
 };

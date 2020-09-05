@@ -17,15 +17,27 @@ const PostDetails = () => {
             .then(data => setPostDetails(data))
     }, [id]);
 
+    // for showing comments
+    const [ comments, setComments ] = useState([]);
+    useEffect(() => {
+        fetch(`https://jsonplaceholder.typicode.com/comments/?postId=${id}`)
+        .then(res => res.json())
+        .then(data => setComments(data))
+    },[id])
+
+
+    // for showing images
 
     return (
-        <div>
+        <div className='single-post'>
             <Box component="span" m={1}>
                 <h2>{title}</h2>
                 <p>{body}</p>
-                <Comments/>
+                <h4>Comments : ({comments.length})</h4>
+                {
+                    comments.map(cmt => <Comments key={cmt.id} comment={cmt}></Comments>)
+                }
             </Box>
-
         </div>
     );
 };

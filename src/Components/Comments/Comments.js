@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import CommentDetails from '../CommentDetails/CommentDetails';
+import React from 'react';
 
-const Comments = () => {
-    const [ comments, setComments ] = useState([]);
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/comments')
-        .then(res => res.json())
-        .then(data => setComments(data))
-    },[]);
+
+
+const Comments = (props) => {
+    // console.log(props);
+    const { name, email, body } = props.comment;
+ 
     return (
         <div>
-
-            {
-               comments.map(comment => <CommentDetails comment={comment}></CommentDetails>)
-            }
+            <p>{body}</p>
+            <p><strong>{name}<br/><small>{email}</small></strong></p>
         </div>
     );
 };
