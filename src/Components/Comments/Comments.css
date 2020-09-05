@@ -1,0 +1,9 @@
+.comment-section{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightcoral;
+}
+.comment-img{
+    width: 100px;
+    border-radius: 50%;
+}

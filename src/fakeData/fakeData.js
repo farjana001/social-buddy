@@ -14,45 +14,45 @@ var courseData = [
     {
         id: 4,
         img: "https://randomuser.me/api/portraits/men/37.jpg"
-    },
-    {
-        id: 5,
-        img: "https://i.ibb.co/hZDCMJQ/teacher.jpg"
-    },
-    {
-        id: 6,
-        img:  "https://randomuser.me/api/portraits/men/17.jpg"
-
-    },
-    
-    {
-        id: 7,
-        img: "https://randomuser.me/api/portraits/men/67.jpg"
-
-    },
-  
-    {
-        id: 8,
-        img: "https://randomuser.me/api/portraits/men/28.jpg"
-    },
-  
-    {
-        id: 9,
-        img: "https://randomuser.me/api/portraits/men/86.jpg"
-    },
-    {
-        id: 10,
-        img: "https://randomuser.me/api/portraits/women/41.jpg"
-
-    },
-    {
-        id: 11,
-        img: "https://i.ibb.co/7b83LRx/gents-hair-sample.jpg" 
-    },
-    {
-        id: 12,
-        img: "https://randomuser.me/api/portraits/women/54.jpg"
     }
+    // {
+    //     id: 5,
+    //     img: "https://i.ibb.co/hZDCMJQ/teacher.jpg"
+    // },
+    // {
+    //     id: 6,
+    //     img:  "https://randomuser.me/api/portraits/men/17.jpg"
+
+    // },
+    
+    // {
+    //     id: 7,
+    //     img: "https://randomuser.me/api/portraits/men/67.jpg"
+
+    // },
+  
+    // {
+    //     id: 8,
+    //     img: "https://randomuser.me/api/portraits/men/28.jpg"
+    // },
+  
+    // {
+    //     id: 9,
+    //     img: "https://randomuser.me/api/portraits/men/86.jpg"
+    // },
+    // {
+    //     id: 10,
+    //     img: "https://randomuser.me/api/portraits/women/41.jpg"
+
+    // },
+    // {
+    //     id: 11,
+    //     img: "https://i.ibb.co/7b83LRx/gents-hair-sample.jpg" 
+    // },
+    // {
+    //     id: 12,
+    //     img: "https://randomuser.me/api/portraits/women/54.jpg"
+    // }
     // {
     //     id: 13,
     //     name: "Cloud DevOps Engineer",
