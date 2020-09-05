@@ -3,6 +3,7 @@ import './PostDetails.css';
 import { useParams } from 'react-router-dom';
 import { Box } from '@material-ui/core';
 import Comments from '../Comments/Comments';
+import fakeData from '../../fakeData/fakeData';
 
 
 
@@ -27,6 +28,8 @@ const PostDetails = () => {
 
 
     // for showing images
+    const [ images, setImages ] = useState(fakeData);
+    const postImg = images.map(img => img.img);
 
     return (
         <div className='single-post'>
@@ -35,7 +38,7 @@ const PostDetails = () => {
                 <p>{body}</p>
                 <h4>Comments : ({comments.length})</h4>
                 {
-                    comments.map(cmt => <Comments key={cmt.id} comment={cmt}></Comments>)
+                    comments.map(cmt => <Comments key={cmt.id} comment={cmt} images={postImg}></Comments>)
                 }
             </Box>
         </div>
