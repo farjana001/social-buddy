@@ -17,7 +17,6 @@ const Posts = () => {
             {
                 posts.map(post => <ShowPosts key={post.id} post={post}></ShowPosts>)
             }
-           
         </div>
     );
 };

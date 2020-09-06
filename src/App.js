@@ -9,7 +9,6 @@ import PostDetails from './Components/PostDetails/PostDetails';
 import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 
-// import CommentDetails from './Components/CommentDetails/CommentDetails';
 
 
 function App() {

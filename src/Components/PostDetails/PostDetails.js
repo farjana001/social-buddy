@@ -9,7 +9,7 @@ import Comments from '../Comments/Comments';
 const PostDetails = () => {
     const { id } = useParams();
 
-    // for showing single post
+    // fetching api for showing single post
     const [postDetails, setPostDetails] = useState({});
     const { title, body } = postDetails;
     useEffect(() => {
@@ -19,7 +19,7 @@ const PostDetails = () => {
             .catch(err => console.log(err))
     }, [id]);
 
-    // for showing comments
+    // fetching api for showing comments
     const [ comments, setComments ] = useState([]);
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/comments/?postId=${id}`)

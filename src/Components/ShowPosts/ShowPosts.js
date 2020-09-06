@@ -37,7 +37,7 @@ const ShowPosts = (props) => {
     // destructuring post data
     const { title, body, id } = props.post;
 
-    // for button
+    // linking button to another component
         let history = useHistory();
         const handleReadMoreButton = (id) => {
             history.push(`/post/${id}`)
