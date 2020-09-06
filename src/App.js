@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Posts from './Components/Posts/Posts';
 import {
   BrowserRouter as Router,
@@ -16,24 +15,22 @@ import Header from './Components/Header/Header';
 function App() {
   return (
     <Router>
-      
-      <Header/>
-    
+      <Header />
       <Switch>
         <Route path='/home'>
-        <Posts/>
+          <Posts />
         </Route>
         <Route path='/post/:id'>
-          <PostDetails/>
+          <PostDetails />
         </Route>
         <Route path='/comment/:commentId'>
-          <PostDetails/>
+          <PostDetails />
         </Route>
         <Route exact path='/'>
-          <Posts/>
+          <Posts />
         </Route>
         <Route path='*'>
-          <NotFound/>
+          <NotFound />
         </Route>
       </Switch>
     </Router>

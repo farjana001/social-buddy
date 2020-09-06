@@ -5,10 +5,10 @@ import { Container } from '@material-ui/core';
 
 
 const Comments = (props) => {
-    //    const images = props.images;
+    
+    const image = props.image;
     const { name, email, body } = props.comment;
-    const image = props.images;
-    console.log(image);
+
 
 
     return (

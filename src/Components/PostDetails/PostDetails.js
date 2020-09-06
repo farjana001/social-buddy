@@ -5,17 +5,17 @@ import { Box } from '@material-ui/core';
 import Comments from '../Comments/Comments';
 import fakeData from '../../fakeData/fakeData';
 
-
-
 const PostDetails = () => {
     const { id } = useParams();
+
+    // for showing single post
     const [postDetails, setPostDetails] = useState({});
     const { title, body } = postDetails;
-
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then(res => res.json())
             .then(data => setPostDetails(data))
+            .catch(err => console.log(err))
     }, [id]);
 
     // for showing comments
@@ -24,12 +24,13 @@ const PostDetails = () => {
         fetch(`https://jsonplaceholder.typicode.com/comments/?postId=${id}`)
         .then(res => res.json())
         .then(data => setComments(data))
-    },[id])
+        .catch(err => console.log(err))
+    },[id]);
 
-
-    // for showing images
+    // fetching fake data for showing images
     const [ images, setImages ] = useState(fakeData);
     const postImg = images.map(img => img.img);
+
 
     return (
         <div className='single-post'>
@@ -38,7 +39,7 @@ const PostDetails = () => {
                 <p>{body}</p>
                 <h3 className='comments'>Comments : <span className='gray-text'>({comments.length})</span></h3>
                 {
-                    comments.map(cmt => <Comments key={cmt.id} comment={cmt} images={postImg}></Comments>)
+                    comments.map(cmt => <Comments key={cmt.id} comment={cmt} image={postImg}></Comments>)
                 }
             </Box>
         </div>

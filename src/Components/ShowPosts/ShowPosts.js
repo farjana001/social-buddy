@@ -1,5 +1,4 @@
 import React from 'react';
-import './ShowPosts.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { Button } from '@material-ui/core';
@@ -36,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ShowPosts = (props) => {
+    // destructuring post data
     const { title, body, id } = props.post;
-    // console.log(props.post);
 
     // for button
         let history = useHistory();
@@ -47,6 +46,7 @@ const ShowPosts = (props) => {
 
     const classes = useStyles();
     const rootRef = React.useRef(null);
+
     return (
         <div className={classes.root} ref={rootRef}>
             <Modal
@@ -57,12 +57,11 @@ const ShowPosts = (props) => {
                 aria-labelledby="server-modal-title"
                 aria-describedby="server-modal-description"
                 className={classes.modal}
-                container={() => rootRef.current}
-            >
+                container={() => rootRef.current}>
                 <div className={classes.paper}>
-                    <h2 className='post-text' id="server-modal-title">{title}</h2>
-                    <p className='post-text' id="server-modal-description">{body}</p>
-                    <Button onClick={() => handleReadMoreButton(id)} variant="contained" color="secondary">Read More</Button>
+                    <h2 style={{textTransform: 'capitalize'}} id="server-modal-title">{title}</h2>
+                    <p style={{textTransform: 'capitalize'}} id="server-modal-description">{body}</p>
+                    <Button onClick={() => handleReadMoreButton(id)} variant="contained" color="secondary">See Comments</Button>
                 </div>
             </Modal>
         </div>

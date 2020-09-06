@@ -10,4 +10,5 @@
   font-size: 15px;
   color: rgb(110, 109, 109);
   font-style: italic;
+  text-transform: lowercase;
 }

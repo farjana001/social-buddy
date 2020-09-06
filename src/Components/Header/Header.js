@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -9,18 +8,18 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { Container } from '@material-ui/core';
 import TopBadge from '../TopBadge/TopBadge';
 
-const useStyles = makeStyles({
-    root: {
-        width: 500,
-    },
-});
+    const useStyles = makeStyles({
+        root: {
+            width: 500,
+        },
+    });
 
-const Header = () => {
+    const Header = () => {
+        const classes = useStyles();
+        const [value, setValue] = React.useState(0);
 
-    const classes = useStyles();
-    const [value, setValue] = React.useState(0);
     return (
-        <div style={{display: 'flex', alignItems: 'center'}}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
             <Container maxWidth="sm">
                 <BottomNavigation
                     value={value}
@@ -35,7 +34,7 @@ const Header = () => {
                     <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
                 </BottomNavigation>
             </Container>
-            <div className="top-badge"><TopBadge/></div>
+            <div style={{ marginRight: '60px' }}><TopBadge /></div>
         </div>
     );
 };
