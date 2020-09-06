@@ -6,7 +6,9 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { Container } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 import TopBadge from '../TopBadge/TopBadge';
+import logo from '../../logo.png';
 
     const useStyles = makeStyles({
         root: {
@@ -20,6 +22,7 @@ import TopBadge from '../TopBadge/TopBadge';
 
     return (
         <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div><Link to='/home'><img style={{margin: '5px 0 0 40px'}} src={logo} alt=""/></Link></div>
             <Container maxWidth="sm">
                 <BottomNavigation
                     value={value}
@@ -27,8 +30,8 @@ import TopBadge from '../TopBadge/TopBadge';
                         setValue(newValue);
                     }}
                     showLabels
-                    className={classes.root}
-                >
+                    className={classes.root}>
+                     
                     <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
                     <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
                     <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />

@@ -22,12 +22,11 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: '85px'
+        marginTop: '75px'
     },
     paper: {
         width: 800,
         backgroundColor: theme.palette.background.paper,
-        // borderRadius: '10px',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
         borderLeft: '8px solid #F30158'
