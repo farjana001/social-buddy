@@ -8,13 +8,17 @@ import {
 } from "react-router-dom";
 import PostDetails from './Components/PostDetails/PostDetails';
 import NotFound from './Components/NotFound/NotFound';
+import Header from './Components/Header/Header';
+
 // import CommentDetails from './Components/CommentDetails/CommentDetails';
 
 
 function App() {
   return (
     <Router>
-      {/* <Comments/> */}
+      
+      <Header/>
+    
       <Switch>
         <Route path='/home'>
         <Posts/>

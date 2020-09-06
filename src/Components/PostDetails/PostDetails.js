@@ -34,9 +34,9 @@ const PostDetails = () => {
     return (
         <div className='single-post'>
             <Box component="span" m={1}>
-                <h2>{title}</h2>
+                <h1 className='single-post-heading'>{title}</h1>
                 <p>{body}</p>
-                <h4>Comments : ({comments.length})</h4>
+                <h3 className='comments'>Comments : <span className='gray-text'>({comments.length})</span></h3>
                 {
                     comments.map(cmt => <Comments key={cmt.id} comment={cmt} images={postImg}></Comments>)
                 }

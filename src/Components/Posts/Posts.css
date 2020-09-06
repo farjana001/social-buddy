@@ -1,0 +1,7 @@
+.post-container{
+    /* margin-left: 80px; */
+    border-top: 5px solid lightcoral;
+    /* border-left: 5px solid lightcoral; */
+    overflow: auto;
+    height: 550px;
+}

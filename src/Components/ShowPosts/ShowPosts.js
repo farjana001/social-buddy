@@ -23,14 +23,15 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         alignItems: 'center',
         justifyContent: 'center',
-
+        marginTop: '85px'
     },
     paper: {
         width: 800,
         backgroundColor: theme.palette.background.paper,
-        borderRadius: '10px',
+        // borderRadius: '10px',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
+        borderLeft: '8px solid #F30158'
     },
 }));
 
@@ -59,8 +60,8 @@ const ShowPosts = (props) => {
                 container={() => rootRef.current}
             >
                 <div className={classes.paper}>
-                    <h2 id="server-modal-title">{title}</h2>
-                    <p id="server-modal-description">{body}</p>
+                    <h2 className='post-text' id="server-modal-title">{title}</h2>
+                    <p className='post-text' id="server-modal-description">{body}</p>
                     <Button onClick={() => handleReadMoreButton(id)} variant="contained" color="secondary">Read More</Button>
                 </div>
             </Modal>

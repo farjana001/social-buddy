@@ -1,5 +1,6 @@
 import React from 'react';
 import './Comments.css';
+import { Container } from '@material-ui/core';
 
 
 
@@ -11,13 +12,15 @@ const Comments = (props) => {
 
 
     return (
-        <div className='comment-section'>
-            <div className=""><img className='comment-img' src={image} alt="" /></div>
-            <div className="comment-body">
-                <p>{body}</p>
-                <p><strong>{name}<br /><small>{email}</small></strong></p>
+        <Container maxWidth='md'>
+            <div className='comment-section'>
+                <div ><img className='comment-img' src={image} alt="" /></div>
+                <div className="comment-body">
+                    <p>{body}</p>
+                    <p><strong>{name}<br /><small className='gray-text'>{email}</small></strong></p>
+                </div>
             </div>
-        </div>
+        </Container>
     );
 };
 
